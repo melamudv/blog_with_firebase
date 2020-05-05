@@ -1,0 +1,35 @@
+<div *ngIf="posts.length > 0;else loading">
+  <div class="s12">
+    <input type="text" placeholder="Search" [(ngModel)]="searchStr">
+  </div>
+
+<table>
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Date</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr *ngFor="let post of posts | searchPosts: searchStr; let idx = index">
+    <td>{{idx+1}}</td>
+    <td>{{post.author}}</td>
+    <td>{{post.title}}</td>
+    <td>{{post.date | date: 'medium': null: 'he'}}</td>
+    <td>
+      <a class="waves-effect waves-light btn"
+         [routerLink]="['/admin','post', post.id, 'edit']"
+      >Open</a>
+      <a class="waves-effect waves-light btn" (click)="remove(post.id)"><i class="material-icons right">delete_forever</i>Delete</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+</div>
+<ng-template #loading>
+
+</ng-template>

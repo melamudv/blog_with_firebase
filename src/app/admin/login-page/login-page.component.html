@@ -1,0 +1,41 @@
+<div class="card s8 center" >
+  <h3 class="center">Enter to Admin</h3>
+  <div class="row">
+    <form class="col s12" [formGroup]="form" (ngSubmit)="submit()" >
+      <div class="row">
+        <div class="input-field col s12" [ngClass]="{'invalid': form.get('password').touched && form.get('password').invalid}">
+          <input id="password" type="password" class="validate" formControlName="password">
+          <label for="password">Password</label>
+          <span *ngIf="form.get('password').touched && form.get('password').invalid">
+            <small *ngIf="form.get('password').errors.required" class="red-text left" data-error="wrong" data-error="Enter password">Enter password</small>
+            <small *ngIf="form.get('password').errors.minlength" class="red-text left" data-error="wrong" data-error="Enter password">Min password must
+              be {{form.get('password').errors.minlength.requiredLength}} now
+              {{form.get('password').errors.minlength.actualLength}}
+            </small>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12" [ngClass]="{'invalid': form.get('email').touched && form.get('email').invalid}" >
+          <input id="email" type="email" class="validate" formControlName="email">
+          <label for="email">Email</label>
+          <span *ngIf="form.get('email').touched && form.get('email').invalid" >
+             <small *ngIf="form.get('email').errors.required" class="red-text left" data-error="wrong" data-error="Enter email">Enter email</small>
+             <small *ngIf="form.get('email').errors.email" class="red-text left" data-error="wrong" data-error="Email not correct">email not correct</small>
+          </span>
+        </div>
+      </div>
+      <span *ngIf="auth.error$ | async as error" >
+             <small  class="red-text left" data-error="wrong">{{error}}</small>
+      </span>
+      <span *ngIf="message" >
+             <small  class="red-text left" data-error="wrong">{{message}}</small>
+      </span>
+      <button
+        type="submit"
+        class="waves-effect waves-light btn custom-btn"
+        [disabled]="form.invalid || subbmited === true"
+      >Log In</button>
+    </form>
+  </div>
+</div>

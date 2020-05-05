@@ -1,0 +1,27 @@
+<div *ngIf="form;else loading">
+  <form action="" [formGroup]="form" (ngSubmit)="submit()">
+
+    <div class="row">
+      <div class="input-field col s12" [ngClass]="{'invalid': form.get('title').touched && form.get('title').invalid}" >
+        <input id="title" type="text" class="validate" formControlName="title">
+        <label for="title">Title</label>
+        <span *ngIf="form.get('title').touched && form.get('title').invalid" >
+             <small *ngIf="form.get('title').errors.title" class="red-text left" data-error="wrong" data-error="Email not correct">email not correct</small>
+          </span>
+      </div>
+    </div>
+
+    <div>
+      <label>Content post:</label>
+      <quill-editor formControlName="text" class="bg"></quill-editor>
+    </div>
+
+    <button  class="waves-effect waves-light btn"
+             type="submit"
+             [disabled]="form.invalid || submitted"
+    >Update</button>
+  </form>
+</div>
+
+<ng-template #loading></ng-template>
+

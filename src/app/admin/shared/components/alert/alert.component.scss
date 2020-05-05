@@ -1,0 +1,12 @@
+::ng-deep .success{
+  background-color: darkseagreen;
+  color: #000;
+}
+::ng-deep .warning{
+  background-color: yellow;
+  color: #000;
+}
+::ng-deep .danger{
+  background-color: darkred;
+  color: #fff;
+}

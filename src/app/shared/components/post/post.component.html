@@ -1,0 +1,23 @@
+<div class="card">
+  <div class="collection">
+  <div class="row">
+
+    <div class="col s10">
+      <div class="card-header">
+        <h2>{{post.title}}</h2>
+        <small>{{post.date | date: 'medium'}}</small>
+      </div>
+
+      <div>
+        <small>{{post.author}}</small>
+      </div>
+
+      <button
+        [routerLink]="['/post', post.id]"
+        class="btn btn-small"
+      >Open</button>
+    </div>
+  </div>
+  </div>
+
+</div>

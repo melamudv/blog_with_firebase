@@ -1,3 +1,11 @@
+# URL TO PROJECT
+<a target="_blank" href="https://angular-blog-30633.web.app/">CLICK TO OPEN</a>
+
+## Links
+<a target="_blank" href="https://angular-blog-30633.web.app/admin/login">Admin</a> <br>
+credentials:<br>
+        pass: 123456<br>
+        email: melamudv@gmail.com
 # Description
     Angular 9 projet for target learning angular 9 and firebase db of GOOGLE
     
@@ -8,14 +16,7 @@
 ## USE CSS
     https://materializecss.com/<br>
     A modern responsive front-end framework based on Material Design
-# URL TO PROJECT
-<a target="_blank" href="https://angular-blog-30633.web.app/">CLICK TO OPEN</a>
 
-## Links
-<a target="_blank" href="https://angular-blog-30633.web.app/admin/login">Admin</a> <br>
-credentials:<br>
-        pass: 123456<br>
-        email: melamudv@gmail.com
 # Blog
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.

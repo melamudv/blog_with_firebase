@@ -1,5 +1,9 @@
 # URL TO PROJECT
-<a target="_blank" href="https://angular-blog-30633.web.app/">CLICK TO OPEN</a>
+<a target="_blank" href="https://angular-blog-30633.web.app/">CLICK TO OPEN POST</a><br>
+<a target="_blank" href="https://angular-blog-30633.web.app/">CLICK TO OPEN ADMIN PANEL</a><br>
+credentials:<br>
+        pass: 123456<br>
+        email: melamudv@gmail.com
 
 ## Links
 <a target="_blank" href="https://angular-blog-30633.web.app/admin/login">Admin</a> <br>
